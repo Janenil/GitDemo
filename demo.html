@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="main"></div>
+	</body>
+	
+	
+<script type='text/javascript'>
+//  test();                    //输出Hello World!
+//  function test(){　　　　　　 
+//      alert('hello');　　　　　//声明式函数
+//  }
+//  test();                    //输出Hello World!
+// 
+//  var test=function(){　　　　//赋值式函数
+//      alert('test');
+//  }
+//  test();                    //输出test
+//  function test(){　　　　　　//声明式函数
+//      alert('Hello World!');
+//  }
+//  test();                    //输出test
+
+console.log(1);
+fn(7);
+//function fn(n){
+//	if(n>31||typeof n != 'number'||n==undefined) return;
+//	var arr=[];
+//	for(var i = 0;i < n;i++){
+//		var rand = Math.floor(Math.random()*30+2);
+//		arr[i] = rand;
+//		for(var j = 0;j<i;j++){
+//			while(arr[i] == arr[j]){
+//				arr[i] = Math.floor(Math.random()*30+2);
+//			}
+//		}
+//	}
+//	var opt = document.getElementById("main");
+//	opt.innerHTML = arr;
+//	console.log(arr);
+//}
+
+
+
+function fn(n){
+	var arr = [];
+	isChecked(n);
+	
+	for(var i = 0;i < n;i++){
+		var rand = getRand(2,32);
+//		arr[i] = rand;
+		if(hasArr(arr,rand)){
+			i--;
+		}else{
+			arr.push(rand);
+		}
+	}
+
+	var opt = document.getElementById("main");
+	opt.innerHTML = arr;
+}
+
+function isChecked(n){
+	if(n>31) return;
+	if(n == undefined) return;
+	if(typeof n != 'number') return;
+}
+	
+function getRand(min,max){
+	var num;
+	if(min >= max){
+		var n;
+		n = max;
+		max = min;
+		min = n;
+	}
+	num = Math.floor(Math.random()*(max-min+1)+min);
+	return num;
+}
+
+function hasArr(arr,rand){
+	for(var i = 0;i < arr.length;i++){
+		if(arr[i] == rand){
+			return true;
+		}	
+	}
+	return false;
+	
+}
+
+</script>
+</html>
