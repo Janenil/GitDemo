@@ -1,0 +1,17 @@
+{
+  "name": "mytodo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "jquery-datetimepicker": "^2.5.14",
+    "store": "^2.0.12",
+    "storejs": "^1.0.16"
+  }
+}
