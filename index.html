@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css"/>
+    <link rel="stylesheet" href="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.min.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		
+    </script>
+</head>
+<body>
+	<div class="msg">
+		<span class="msg_content">
+			
+		</span>
+		<span class="anchor confirmed">知道了</span>
+	</div>
+	<div class="container">
+		<h1>My ToDo</h1>
+		<form class="add-task">
+			<input type="text" name="content" placeholder="eg:下午学习两小时" autofocus="autofocus" autocomplete="off">
+			<button type="submit">submit</button>
+		</form>
+		<div class="task-list">
+			<!--<div class="task-item">
+				<span><input type="checkbox"></span>
+				<span class="task-content">item content 1</span>
+				<span>delete</span>
+				<span>detail</span>
+			</div>-->
+		</div>
+		
+		<div class="task_detail_mask"></div>
+		<div class="task-detail">
+			<!--<div class="">
+				<div class="content">
+					下午学习两小时
+				</div>
+				
+				<div>
+					<div class="desc">
+						<textarea ></textarea>
+					</div>
+				</div>
+				<div class="remind">
+					<input type="date" />
+					<!--<button type="submit">submit</button>-->
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<video class="alerter" src="alert.mp3"></video>
+</body>
+ <script src="node_modules/jquery/dist/jquery.js"></script>
+ <script src="node_modules/storejs/dist/store.js"></script>
+ <script src="node_modules/jquery-datetimepicker/build/jquery.datetimepicker.full.js" ></script>
+ <script src="js/base.js"></script>
+</html>
